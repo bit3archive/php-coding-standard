@@ -152,6 +152,23 @@ func(
 );
 ```
 
+When chain method calls, put each method call in separate line if it make sense or the line gets to long.
+```
+// bad
+$database->prepare('SELECT a,long,list,of,fields FROM some_table WHERE some_complex_and_long_where')->limit(100)->offset(50)->execute();
+
+// a little bit better
+$database->prepare('SELECT a,long,list,of,fields FROM some_table WHERE some_complex_and_long_where')
+	->limit(100)->offset(50)->execute();
+
+// good
+$database
+	->prepare('SELECT a,long,list,of,fields FROM some_table WHERE some_complex_and_long_where')
+	->limit(100)
+	->offset(50)
+	->execute();
+```
+
 When using ternary operator, put `then` and `else` part in separate lines and indent one time.
 ```php
 // bad
@@ -192,22 +209,25 @@ $intUser = 1;
 
 // good
 $userId = 1;
+```
 
-
+```php
 // bad
 $objUser = ...some object...;
 
 // good
 $user = ...some object...;
+```
 
-
+```php
 // bad
 $arrUsers = array(1, 2, 3);
 
 // good
 $userIds = array(1, 2, 3);
+```
 
-
+```php
 // bad
 $arrUsers = array(...object..., ...object..., ...object...);
 
@@ -244,7 +264,7 @@ Keep every line as simple as possible, do not combine to many operations in one 
 Use readable control structures if needed, even you write **a lot** more lines!
 ```php
 // bad
-$var = ($foo != $bar && ($n = count($zap)) || $dig) ? $this->func($zap, $foo, $bar) : $this->other($n)->chain($foo, $bar);
+$var = ($foo != $bar && count($zap) || $dig) ? $this->func($zap, $foo, $bar) : $this->other(count($zap))->chain($foo, $bar);
 
 // good
 $n = count($zap);
@@ -305,9 +325,19 @@ $this->func($length);
 // be gentle with logical chaining
 // the array_* functions are logical belongs to each other,
 // but its hard to understand this at a glance
-array_values(array_filter(array_map('trim', $array)));
+$result = array_values(array_filter(array_map('trim', $array)));
 
-// better, keep it simple, fast readable and more comprehensible
+// better
+$result = array_values(
+	array_filter(
+		array_map(
+			'trim',
+			 $array
+		 )
+	)
+);
+
+// best, keep it simple, fast readable and more comprehensible - and it is short :-)
 $result = array_map('trim', $array);
 $result = array_filter($array);
 $result = array_values($result);
