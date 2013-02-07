@@ -302,23 +302,31 @@ else {
 Ternary operator is only allowed for primitive left/right decisions. Do not use in combination with function calls or other logic.
 ```php
 // disallowed, use if-statement instead
-$var = $if ? $this->then() : $this->else();
+$var = $if
+	? $this->then()
+	: $this->else();
 
 // allowed
-$var = $if ? $then : $else;
+$var = $if
+	? $then
+	: $else;
 ```
 
 Don't use logic in function call parameters.
 ```php
 // bad
 func(
-	$if ? $then : $else,
+	$if
+		? $then
+		: $else,
 	'foo',
 	other('bar')
 );
 
 // good
-$param = $if ? $then : $else;
+$param = $if
+	? $then
+	: $else;
 $other = other('bar');
 func(
 	$param,
@@ -361,6 +369,6 @@ $result = array_values(
 
 // best, keep it simple, fast readable and more comprehensible - and it is short :-)
 $result = array_map('trim', $array);
-$result = array_filter($array);
+$result = array_filter($result);
 $result = array_values($result);
 ```
