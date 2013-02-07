@@ -37,7 +37,9 @@ class Foo
 		...
 	}
 }
+```
 
+```php
 function func()
 {
 	...
@@ -59,19 +61,27 @@ else if (...) {
 else {
 	...
 }
+```
 
+```php
 for (...) {
 	...
 }
+```
 
+```php
 foreach (...) {
 	...
 }
+```
 
+```php
 while (...) {
 	...
 }
+```
 
+```php
 do {
 	...
 }
@@ -95,28 +105,36 @@ else if (
 else {
 	...
 }
+```
 
+```php
 for (
 	... very long ...
 	... multiline ...
 ) {
 	...
 }
+```
 
+```php
 foreach (
 	... very long ...
 	... multiline ...
 ) {
 	...
 }
+```
 
+```php
 while (
 	... very long ...
 	... multiline ...
 ) {
 	...
 }
+```
 
+```php
 do {
 	...
 }
@@ -190,7 +208,9 @@ $array = array(
 	'item2',
 	'item3',
 );
+```
 
+```php
 $array = array(
 	'index1' => 'item1',
 	'index2' => 'item2',
