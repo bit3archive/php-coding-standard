@@ -9,6 +9,14 @@ Don't be shy to write more lines, if it makes each line more atomic.
 This coding standard based on the great TYPO3 coding standard, see
 http://forge.typo3.org/projects/team-php_codesniffer/wiki/Using_the_TYPO3_Coding_Standard
 
+Usage
+=====
+
+```bash
+$ git clone git@github.com:bit3/php-coding-standard.git
+$ phpcs --standard=/path/to/php-coding-standard/Bit3/ruleset.xml /path/to/my/source
+```
+
 Examples
 =====
 
