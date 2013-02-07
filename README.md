@@ -25,7 +25,7 @@ Add spaces to split operators:
 * arrays: `array('foo' => 'bar', 'bar' => 'foo')`
 * comments: `// comment` or `* multiline comment`
 
-Place opening brace '{' on new line for all non-control-structures like class or function declaration.
+Place opening brace `{` on new line for all non-control-structures like class or function declaration.
 Place `extends` and `implements` on new line and indent one time.
 ```php
 class Foo
