@@ -341,7 +341,9 @@ $this->func(strlen($content));
 $content = file_get_contents('/some/file');
 $length  = strlen($content);
 $this->func($length);
+```
 
+```php
 // be gentle with logical chaining
 // the array_* functions are logical belongs to each other,
 // but its hard to understand this at a glance
