@@ -53,7 +53,7 @@ else {
 	$var = $this->other(count($zap))->chain($foo, $bar);
 }
 ```
-As you can see, this snippet reflect the execution order and it is easier to understand.
+As you can see, this snippet more reflect the execution order and it is much easier to understand what it do.
 
 Usage
 =====
