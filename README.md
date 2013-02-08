@@ -66,7 +66,7 @@ $ phpcs --standard=/path/to/php-coding-standard/Bit3/ruleset.xml /path/to/my/sou
 Whitespaces
 =====
 
-Do **not** use spaces for indention. Use TAB.
+Do **not** use `SPACE` for indention. Use `TAB`.
 
 Add spaces to split operators:
 * assignment: `$var = 'value'`
@@ -103,8 +103,8 @@ Don't add a space before opening bracked `(` in function declarations or calls.
 Control structures
 =====
 
-Place opening brace '{' on same line for all control-structures.
-Add newline after closing brace '}', even the control-structure continues.
+Place opening brace `{` on same line for all control-structures.
+Add newline after closing brace `}`, even the control-structure continues.
 ```php
 if (...) {
 	...
@@ -142,7 +142,7 @@ do {
 while (...);
 ```
 
-If control-structure condition gets to long, place closing bracket and opening brace ') {' in a separate line and place condition in separate line.
+If control-structure condition gets to long, place closing bracket and opening brace `) {` in a separate line and place condition in separate line.
 ```php
 if (
 	... very long ...
