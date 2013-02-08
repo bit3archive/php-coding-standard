@@ -239,8 +239,8 @@ func ('a','b','c');
 func('a', 'b', 'c');
 ```
 
-When parameter list gets long, make it multiline and put **every** parameter in a single line.
-Also put the closing bracket `)` in a single line.
+When parameter list gets long, make it multiline and put **every** parameter on a singleline.
+Also put the closing bracket `)` on a singleline.
 ```php
 // bad
 func ('short', 'short',
