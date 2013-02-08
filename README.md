@@ -170,7 +170,7 @@ while (...);
 Why putting the `else` on a new line?
 It's simple, first it is the beginning of a new block. Second it is easier to make comments that describe the conditions.
 
-```
+```php
 // describe if
 if (...) {
 	...
