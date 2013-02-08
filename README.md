@@ -167,6 +167,27 @@ do {
 while (...);
 ```
 
+Why putting the `else` on a new line?
+It's simple, first it is the beginning of a new block. Second it is easier to make comments that describe the conditions.
+
+```
+// describe if
+if (...) {
+	...
+}
+// describe else if
+else if (...) {
+	...
+}
+// describe else
+else {
+	...
+}
+```
+
+Long and multiline conditions
+-----
+
 If control-structure condition gets to long, place closing bracket and opening brace `) {` in a separate line and place condition in separate line.
 ```php
 if (
