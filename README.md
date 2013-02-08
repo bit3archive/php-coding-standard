@@ -103,17 +103,6 @@ Don't add a space before opening bracked `(` in function declarations or calls.
 Naming
 -----
 
-Use camel-case method names.
-```php
-// bad
-function foo_bar() {
-}
-
-// good
-function fooBar() {
-}
-```
-
 Use pascal-case class names.
 ```php
 // bad
@@ -122,6 +111,17 @@ class foo_bar {
 
 // good
 class FooBar {
+}
+```
+
+Use camel-case method names.
+```php
+// bad
+function foo_bar() {
+}
+
+// good
+function fooBar() {
 }
 ```
 
