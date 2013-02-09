@@ -249,28 +249,35 @@ Don't forget the whitespace before opening bracket `(`.
 Ternary operator
 -----
 
-When using ternary operator, put `then` and `else` part in separate lines and indent one time.
+When using ternary operator, you should put `then` and `else` part in separate lines and indent one time if line gets longer.
 ```php
-// bad
-$foo = $if ? $then : $else;
+// good
+$variable = $if ? $then : $else;
 
 // good
-$foo = $if
-	? $then
-	: $else;
+$variable = $if ? $this->then() : $this->else();
+
+// bad
+$variableObjectname = $someLongVariable != $otherLongVariable ? $veryLongVariableName : $anotherVeryLongVariableName;
+
+// good
+$variableObjectname = $someLongVariable != $otherLongVariable
+	? $veryLongVariableName
+	: $anotherVeryLongVariableName;
 ```
 
-Ternary operator is only allowed for primitive left/right decisions. Do not use in combination with function calls or other logic.
+Ternary operator should only be used for simple left/right decisions. Do not use in combination with complex conditions or logic.
 ```php
-// disallowed, use if-statement instead
-$var = $if
-	? $this->then()
-	: $this->else();
+// bad, use formated if-statement instead
+$variable = $firstVariable != $secondVariable && someCheckFunction($variableName) || anotherCheckFunction($thirdVariable)
+	? $this->someComplexFunction($firstVariable, $secondVariable, $thirdVariable)
+	: 'some string prefix ' . substr($this->otherComplexFunction($variablename), 0, strlen($thirdVariable)) . ' some string suffix';
 
-// allowed
-$var = $if
-	? $then
-	: $else;
+// good
+$variable = $firstVariable != $secondVariable ? $this->then() : $this->else();
+
+// good
+$variable = someCheckFunction($variableName) ? $then : $else;
 ```
 
 Function/Method calls
