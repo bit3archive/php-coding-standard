@@ -47,10 +47,10 @@ if (
 	$foo != $bar && count($zap) ||
 	$dig
 ) {
-	$var = $this->func($zap, $foo, $bar);
+	$variable = $this->func($zap, $foo, $bar);
 }
 else {
-	$var = $this->other(count($zap))->chain($foo, $bar);
+	$variable = $this->other(count($zap))->chain($foo, $bar);
 }
 ```
 As you can see, this snippet more reflect the execution order and it is much easier to understand what it do.
@@ -69,7 +69,7 @@ Whitespaces
 Do **not** use `SPACE` for indention. Use `TAB`.
 
 Add spaces to split operators:
-* assignment: `$var = 'value'`
+* assignment: `$variable = 'value'`
 * parameters: `func($a, $b, $c)`
 * arrays: `array('foo' => 'bar', 'bar' => 'foo')`
 * comments: `// comment` or `* multiline comment`
@@ -384,7 +384,7 @@ Keep every line as simple as possible, do not combine to many operations in one 
 Use readable control structures if needed, even you write **a lot** more lines!
 ```php
 // bad
-$var = ($foo != $bar && count($zap) || $dig) ? $this->func($zap, $foo, $bar) : $this->other(count($zap))->chain($foo, $bar);
+$variable = ($foo != $bar && count($zap) || $dig) ? $this->func($zap, $foo, $bar) : $this->other(count($zap))->chain($foo, $bar);
 
 // good
 $n = count($zap);
@@ -392,10 +392,10 @@ if (
 	$foo != $bar && $n ||
 	$dig
 ) {
-	$var = $this->func($zap, $foo, $bar);
+	$variable = $this->func($zap, $foo, $bar);
 }
 else {
-	$var = $this->other($n)->chain($foo, $bar);
+	$variable = $this->other($n)->chain($foo, $bar);
 }
 ```
 
