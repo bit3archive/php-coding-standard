@@ -63,6 +63,13 @@ $ git clone git@github.com:bit3/php-coding-standard.git
 $ phpcs --standard=/path/to/php-coding-standard/Bit3/ruleset.xml /path/to/my/source
 ```
 
+Definitions
+=====
+
+*long line* means a line that is longer than **60** characters.
+No line should be longer than **80** characters.
+No line must be longer than **100** characters.
+
 Whitespaces
 =====
 

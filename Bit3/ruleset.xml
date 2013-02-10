@@ -48,8 +48,8 @@
 	<rule ref="Generic.Files.LineEndings" />
 	<rule ref="Generic.Files.LineLength">
 		<properties>
-			<property name="lineLimit" value="130"/>
-			<property name="absoluteLineLimit" value="200"/>
+			<property name="lineLimit" value="80"/>
+			<property name="absoluteLineLimit" value="100"/>
 		</properties>
 	</rule>
 	<rule ref="../TYPO3/Sniffs/Files/IncludingFileSniff.php" />
