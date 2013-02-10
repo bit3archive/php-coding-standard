@@ -1,0 +1,26 @@
+{
+	"name":"bit3/php-coding-standard",
+	"description":"bit3 PHP coding standards",
+	"version":"1.0.0-dev",
+	"keywords":["php", "phpcs", "coding standard"],
+	"type":"coding-standard",
+	"homepage":"http://bit3.de",
+	"license":"BSD-3-Clause",
+	"authors":[
+		{
+			"name":"Tristan Lins",
+			"email":"tristan.lins@bit3.de",
+			"homepage":"http://bit3.de",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"email":"info@bit3.de",
+		"issues":"https://github.com/bit3/php-coding-standard/issues",
+		"wiki":"https://github.com/bit3/php-coding-standard/wiki",
+		"source":"https://github.com/bit3/php-coding-standard"
+	},
+	"require-dev":{
+		"squizlabs/php_codesniffer":"1.*"
+	}
+}
