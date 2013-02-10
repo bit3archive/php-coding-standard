@@ -70,6 +70,51 @@ Definitions
 No line should be longer than **80** characters.
 No line must be longer than **100** characters.
 
+Files
+=====
+
+No file must contain more than one class, interface or function.
+The file name must the same (including case) as the class, interface or function named defined in it.
+Without any prefix (e.g. `class.`) or suffix (e.g. `.inc`), expect the the file type extension `.php`.
+
+Runner scripts, should contain a runner class, containing a `run` method.
+
+Example `index.php`:
+```php
+<?php
+
+require_once('autoload.php');
+
+class index
+{
+	public function run()
+	{
+		// runtime code
+	}
+}
+
+$index = new index();
+$index->run();
+```
+
+Hint: Runner classes must not be in pascal-case, but must match the file name.
+
+Second example `ajax.php`
+```php
+<?php
+
+class ajax
+{
+	public function run()
+	{
+		// runtime code
+	}
+}
+
+$ajax = new ajax();
+$ajax->run();
+```
+
 Whitespaces
 =====
 
