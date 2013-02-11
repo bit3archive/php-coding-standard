@@ -67,7 +67,7 @@
 	<!-- Loops -->
 
 	<!-- NamingConventions -->
-	<rule ref="../TYPO3/Sniffs/NamingConventions/ValidVariableNameSniff.php" />
+	<rule ref="../Bit3/Sniffs/NamingConventions/ValidVariableNameSniff.php" />
 	<rule ref="Generic.NamingConventions.ConstructorName" />
 	<rule ref="../TYPO3/Sniffs/NamingConventions/ValidFunctionNameSniff.php" />
 
