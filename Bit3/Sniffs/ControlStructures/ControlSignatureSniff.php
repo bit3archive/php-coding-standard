@@ -15,7 +15,7 @@
 /**
  * Verifies that control statements conform to their coding standards.
  *
- * @category  PHP
+ * @category  ControlStructures
  * @package   BIT3_PHPCS
  * @author    Tristan Lins <tristan.lins@bit3.de>
  * @copyright 2013 bit3 UG
