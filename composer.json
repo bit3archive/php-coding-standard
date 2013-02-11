@@ -5,7 +5,10 @@
 	"keywords":["php", "phpcs", "coding standard"],
 	"type":"coding-standard",
 	"homepage":"http://bit3.de",
-	"license":"BSD-3-Clause",
+	"license":[
+		"BSD-3-Clause",
+		"GPL-2.0+"
+	],
 	"authors":[
 		{
 			"name":"Tristan Lins",
