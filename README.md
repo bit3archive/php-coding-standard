@@ -67,8 +67,8 @@ Definitions
 =====
 
 * *long line* means a line that is longer than **60** characters.
-* No line should be longer than **80** characters.
-* No line must be longer than **100** characters.
+* No line should be longer than **100** characters.
+* No line must be longer than **120** characters.
 
 Files
 =====
