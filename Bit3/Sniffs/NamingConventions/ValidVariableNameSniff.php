@@ -34,6 +34,13 @@ class Bit3_Sniffs_NamingConventions_ValidVariableNameSniff extends PHP_CodeSniff
 	);
 
 	/**
+	 * Contains built-in properties which we don't check
+	 *
+	 * @var array
+	 */
+	protected $allowedInbuiltPropertiesNames = array();
+
+	/**
 	 * Processes class member variables.
 	 *
 	 * @param PHP_CodeSniffer_File $phpcsFile The file being scanned.
@@ -47,7 +54,7 @@ class Bit3_Sniffs_NamingConventions_ValidVariableNameSniff extends PHP_CodeSniff
 		if (empty($memberProps) === true) {
 			return;
 		}
-		$this->processVariableNameCheck($phpcsFile, $stackPtr, 'member ');
+		$this->processVariableNameCheck($phpcsFile, $stackPtr, $this->allowedInbuiltPropertiesNames, 'member ');
 	}
 
 	/**
@@ -60,7 +67,7 @@ class Bit3_Sniffs_NamingConventions_ValidVariableNameSniff extends PHP_CodeSniff
 	 */
 	protected function processVariable(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
 	{
-		$this->processVariableNameCheck($phpcsFile, $stackPtr);
+		$this->processVariableNameCheck($phpcsFile, $stackPtr, $this->allowedInbuiltVariableNames);
 	}
 
 	/**
@@ -87,13 +94,13 @@ class Bit3_Sniffs_NamingConventions_ValidVariableNameSniff extends PHP_CodeSniff
 	 *
 	 * @return void
 	 */
-	protected function processVariableNameCheck(PHP_CodeSniffer_File $phpcsFile, $stackPtr, $scope = '')
+	protected function processVariableNameCheck(PHP_CodeSniffer_File $phpcsFile, $stackPtr, $allowedInbuiltNames, $scope = '')
 	{
 		$tokens       = $phpcsFile->getTokens();
 		$variableName = ltrim($tokens[$stackPtr]['content'], '$');
 		// There are some historic builtin TYPO3 vars we don't care here.
 		// if we found such vars, we leave the sniff here.
-		if (in_array($variableName, $this->allowedInbuiltVariableNames)) {
+		if (in_array($variableName, $allowedInbuiltNames)) {
 			return;
 		}
 
