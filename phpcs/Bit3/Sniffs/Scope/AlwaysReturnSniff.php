@@ -48,6 +48,8 @@ class Bit3_Sniffs_Scope_AlwaysReturnSniff extends TYPO3SniffPool_Sniffs_Scope_Al
 
 		// constructors and methods with inherited doc does not need a return value
 		if ($this->methodName !== '__construct' &&
+			$this->classToken &&
+			isset($tokens[$this->classToken]) &&
 			$tokens[$this->classToken]['code'] == T_FUNCTION && (
 				!$docComment ||
 				strpos($docComment->getComment()->getContent(), '{@inheritdoc}') === false)
