@@ -1,7 +1,6 @@
 {
 	"name":"bit3/php-coding-standard",
 	"description":"bit3 PHP coding standards",
-	"version":"1.0.0-dev",
 	"keywords":["php", "phpcs", "coding standard"],
 	"type":"coding-standard",
 	"homepage":"http://bit3.de",
