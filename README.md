@@ -1,5 +1,5 @@
 bit3 coding standards
-=====
+=====================
 
 These are our coding standards.
 
@@ -58,10 +58,22 @@ As you can see, this snippet more reflect the execution order and it is much eas
 Usage
 =====
 
-```bash
-$ git clone git@github.com:bit3/php-coding-standard.git
-$ phpcs --standard=/path/to/php-coding-standard/Bit3/ruleset.xml /path/to/my/source
+Install the coding standards via composer:
+```json
+"require-dev":{
+	"bit3/php-coding-standard":"@dev"
+}
 ```
+
+After updating dependencies, copy the example ant build file from vendor/bit3/php-coding-standard/example/build.xml into your project.
+If your sources are not in `src/`, change the path to your sources in the build file.
+
+Hint: If you not use phpunit, remove the phpunit target from build file.
+
+You can run the tests by invoke `ant phpmd` and `ant phpcs`.
+Running `ant` or `ant test` will run all test targets.
+
+Hint: To run all testes, even if one fail, use `ant -keep-going`.
 
 Definitions
 =====
