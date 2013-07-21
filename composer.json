@@ -22,8 +22,8 @@
 		"wiki":"https://github.com/bit3/php-coding-standard/wiki",
 		"source":"https://github.com/bit3/php-coding-standard"
 	},
-	"require-dev":{
-		"squizlabs/php_codesniffer":"1.*",
-		"phpmd/phpmd" : "1.*"
+	"require":{
+		"squizlabs/php_codesniffer":"1.4.*",
+		"phpmd/phpmd" : "1.4.*"
 	}
 }
