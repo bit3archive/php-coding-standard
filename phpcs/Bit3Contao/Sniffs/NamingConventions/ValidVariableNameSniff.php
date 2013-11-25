@@ -39,6 +39,7 @@ class Bit3Contao_Sniffs_NamingConventions_ValidVariableNameSniff extends Bit3_Sn
 	 * @var array
 	 */
 	protected $allowedInbuiltPropertiesNames = array(
+		'strTable',
 		'strTemplate',
 		'blnSubmitInput',
 	);
